@@ -12,13 +12,14 @@
 
 #include <list>
 #include <string>
+#include <functional>
 
 // TODO: namespace
 
 class StateTransition; // forward declaration
 
-typedef void (*userFunction)();
-
+//typedef void (*userFunction)();
+typedef std::function<void(void)> userFunction;
 
 class State
 {
